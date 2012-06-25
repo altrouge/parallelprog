@@ -35,11 +35,14 @@ for i in range(0,size_cac):
 
 
 FILE.write("int k;\n")
-FILE.write("for(k=0;k<matsize;k++)\n")
+FILE.write("for(k=0;k<matsize;++k)\n")
 FILE.write("{\n")
 for i in range(0,size_cac):
 	for j in range(0,size_cac):
-			FILE.write("cr[%d][%d] = c[(size*i / r) + %d][(size*i %% r)  + %d];\n" %(i,j,i,j))
+			FILE.write("cr[%d][%d] += a[(size*i / r) + %d][k] * b[k][(size*i %% r) + %d];\n" %(i,j,i,j))
 FILE.write("}\n")
+for i in range(0,size_cac):
+	for j in range(0,size_cac):
+		FILE.write("c[(size*i / r) + %d][(size*i %% r)  + %d] = cr[%d][%d];\n" %(i,j,i,j))
 FILE.write("}\n")
 FILE.write("}\n")
