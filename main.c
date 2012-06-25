@@ -42,7 +42,7 @@ int main(int argc, char** argv)
 		C[i] = malloc(1000*sizeof(double*));
 	// in total, 24 MB.
 	for(i=0;i<length;++i)
-		for(j=0;i<length;++j)
+		for(j=0;j<length;++j)
 		{
 			// we put values in A B and C
 			A[i][j] = 0.5;
