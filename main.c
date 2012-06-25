@@ -33,13 +33,13 @@ int main(int argc, char** argv)
 	int length = 1000;
 	A = malloc(length*sizeof(double*));
 	for(i=0; i<length; ++i)
-		A[i] = malloc(1000*sizeof(double*));
+		A[i] = malloc(1000*sizeof(double));
 	B = malloc(length*sizeof(double*));
 	for(i=0; i<length; ++i)
-		B[i] = malloc(1000*sizeof(double*));
+		B[i] = malloc(1000*sizeof(double));
 	C = malloc(length*sizeof(double*));
 	for(i=0; i<length; ++i)
-		C[i] = malloc(1000*sizeof(double*));
+		C[i] = malloc(1000*sizeof(double));
 	// in total, 24 MB.
 	for(i=0;i<length;++i)
 		for(j=0;j<length;++j)
